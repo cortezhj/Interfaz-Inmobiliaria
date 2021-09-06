@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Visitas</title>
+	<link rel="stylesheet" href="../../assets/css/visitas.css">
+	<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+</head>
+<body>
+<aside>
+	<div class="logo">
+		<img src="../../assets/img/logo.png">
+		<a class="title">Inmobiliaria</a>
+	</div>
+	<div class="menu">
+		<nav>
+			<ul class="lista">
+				<li><img src="../../assets/img/home1.svg"><a href="../../pages/admin/page.html">Inmuebles</a></li>
+				<li><img src="../../assets/img/owner1.svg"><a href="../../pages/admin/propietarios.html">Propietarios</a></li>
+				<li><img src="../../assets/img/key.svg"><a href="../../pages/admin/inquilinos.html">Inquilinos</a></li>
+				<li  class="target"><img src="../../assets/img/visit.svg"><a  class="gg" href="../../pages/admin/visitas.html">Visitas</a></li>
+				<li><img src="../../assets/img/speaker.svg"><a href="../../pages/admin/anuncios.html">Anuncios</a></li>
+				<li><img src="../../assets/img/document.svg"><a href="../../pages/admin/contratos.html">Contratos</a></li>
+				<li><img src="../../assets/img/import.svg"><a href="../../pages/admin/inspecciones.html">Inspecciones</a></li>
+			</ul>
+		</nav>
+	
+		<div class="salir">
+			<img src="../../assets/img/logout1.svg">
+			<a href="../../pages/login.html">Salir</a>
+		</div>	
+	</div>
+</aside>
+<main>
+<header>
+	<form method="POST">
+		<input class="busqueda" type="search" name="referencia" placeholder="Ref." title="Un código válido consiste en una cadena con 2 letras y 4 dígitos">
+    	<input class="btn" type="submit" value="Buscar">
+  	</form>
+</header>
+<section class="section">
+
+
+
+	<section>
+		<h1>Registrar Visitas</h1>
+		<a class="btnReporter"><img src="../../assets/img/boton-pdf.svg">Generar Reporte</a>
+		<div class="register">
+			<h2>Fecha / Código del Inmueble</h2>
+			<form method="POST">	
+				<div class="form1">
+					<input class="fecha" type="date" name="precio" required>			
+					<input type="text" name="codigo" placeholder="REF" required>
+				</div>
+				<h2>Código del cliente</h2>
+				<div class="form1">
+					<input class="code" type="text" name="codigo" placeholder="REF" required>
+				</div>
+				<h2>Comentarios del cliente</h2>
+				<div class="form1">			
+					<div>
+						<textarea class="texto" required>
+						</textarea>
+					</div>
+				</div>											
+				<center style="padding-bottom: 25px; margin-top: 15px">
+					<input class="enviar" type="submit" name="enviar" value="Guardar">	
+				</center>
+			</form>	
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<h1>Buscar Visitas</h1>
+		<div class="caja">
+			<form method="POST">
+				<div>
+					<input type="date" name="precio">
+				</div>
+				<div>
+					<input 	type="texto" name="codigo" placeholder="REF">
+				</div>
+				<div>
+					<button id="filtrar" class="button">Buscar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+	<section>
+			<h2 class="all">Todas las visitas</h2>
+			<div class="caja2"></div>
+	</section>	
+</section>
+</main>
+</body>
+</html>

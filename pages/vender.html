@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vender | Inmobiliaria</title>
+	<link rel="stylesheet" href="../assets/css/vender.css">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+</head>
+<body class="site">
+<header>
+	<div class="logo">
+		<div class="imagen">
+			<a href="../index.html">
+				<img src="../assets/img/logo2.png">
+			</a>
+		</div>
+		<div class="titulo">
+			<a href="../index.html">Inmobiliaria</a>
+		</div>
+	</div>
+	<div class="head">
+		<a href="../pages/login.html"><img class="user" src="../assets/img/user.png">&nbsp;Iniciar Sesión</a>
+	</div>
+	<div class="header">
+		<nav>
+			<ul class="lista">
+				<li><a href="../index.html">INICIO</a></li>
+				<li><a href="../pages/inmuebles.html">INMUEBLES</a></li>
+				<li><a class="target" href="../pages/vender.html">VENDER</a></li>
+				<li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+				<li><a href="../pages/contacto.html">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</div>	
+</header>
+
+<main class="site_content">
+	<br><br><br>
+	<section class="section1">
+		<article>
+			<h1>Le ayudamos a vender o alquilar su vivienda</h1>
+			<hr class="line">
+			<p>Si necesita vender o alquilar su casa en Barquisimeto contáctenos para que podamos decirle el valor real de su vivienda, basándonos en nuestra experiencia en el mercado inmobiliario. Estudiamos detalladamente cada vivienda y su ubicación, para poder realizar un asesoramiento personalizado.</p>
+		</article>
+	</section>
+	<section class="section2">
+		<div class="opacidad"></div>
+	</section>
+	<section class="section3">
+		<div class="contenido3">
+			<h2>AÑADE TU PROPIEDAD A NUESTRO CATÁLOGO INMOBILIARIO</h2>	
+			<hr>
+			<p><b>Rellena el siguiente formulario</b> para que podamos ponernos en contacto contigo y enviar uno de nuestros agentes a valorar tu casa de forma gratuita.</p>
+			
+			<form action="" id="form" method="POST">
+				<input type="text" name="nombre" id="name" onkeypress="nameValid()" placeholder="Nombre y apellidos*" pattern="^[a-zA-Z]+$" required>
+				<input type="email" name="email" placeholder="Email*" required>
+				<input type="tel" name="telefono" placeholder="Teléfono*" id="phone" onkeypress="phoneValid()" pattern="[0-9]{11}" required>
+				<select required>
+					<option value="" selected>Zona donde se ubica tu propiedad</option>
+					<option value="">Andrés Eloy Blanco</option>
+					<option value="">Crespo</option>
+					<option value="">Iribarren</option>
+					<option value="">Jiménez</option>
+					<option value="">Morán</option>
+					<option value="">Palavecino</option>
+					<option value="">Simón Planas</option>
+					<option value="">Torres</option>
+					<option value="">Urdaneta</option>
+				</select>
+				<textarea id="comment" onkeypress="commentValid()" class="caja" name="texto" rows="3" placeholder="Quieres comentarnos algo"></textarea>
+				<input class="button" id="btnSend" type="submit" value="Enviar">
+			</form>
+
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>© 2020 Inmobiliaria. Todos los Derechos Reservados.</p>
+</footer>	
+
+<script src="../assets/js/validaForm.js"></script>
+</body>
+</html>

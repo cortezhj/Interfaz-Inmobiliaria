@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicia Sesión</title>
+	<link rel="stylesheet" href="../assets/css/login.css">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+</head>
+<body class="site">
+<header>
+	<div class="logo">
+		<div class="imagen">
+			<a href="../index.html">
+				<img src="../assets/img/logo2.png">
+			</a>
+		</div>
+		<div class="titulo">
+			<a href="../index.html">Inmobiliaria</a>
+		</div>
+	</div>
+	<div class="head">
+		<a href="../pages/login.html"><img class="user" src="../assets/img/user.png">&nbsp;Iniciar Sesión</a>
+	</div>
+	<div class="header">
+		<nav>
+			<ul class="lista">
+				<li><a href="../index.html">INICIO</a></li>
+				<li><a href="../pages/inmuebles.html">INMUEBLES</a></li>
+				<li><a href="../pages/vender.html">VENDER</a></li>
+				<li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+				<li><a href="../pages/contacto.html">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</div>	
+</header>
+
+<main class="site_content">
+	<section class="section">
+		<form action="" method="POST" id="form">
+			<div class="form">
+				<h1>Bienvenido</h1>
+				<div class="grupo">
+					<input type="email" name="" id="name" required>
+					<span class="barra"></span>
+					<label for="">Email</label>
+				</div>
+				<div class="grupo">
+					<input type="password" name="" id="pass" onkeypress="validPass()" required>
+					<span class="barra"></span>
+					<label for="">Contraseña</label>
+				</div>
+				<button id="btnSend" type="submit">Iniciar Sesión</button>
+				<center style="margin-top: 30px;">
+				<a class="link" href="../pages/admin/page.html">Administrador</a>
+				</center>
+			</div>
+		</form>
+	</section>
+		
+		
+</main>
+
+<footer>
+	<p>© 2020 Inmobiliaria. Todos los Derechos Reservados.</p>
+</footer>	
+
+<script src="../assets/js/validaForm.js"></script>
+</body>
+</html>

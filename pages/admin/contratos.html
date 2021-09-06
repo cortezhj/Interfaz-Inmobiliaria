@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contratos</title>
+	<link rel="stylesheet" href="../../assets/css/contratos.css">
+	<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+</head>
+<body>
+<aside>
+	<div class="logo">
+		<img src="../../assets/img/logo.png">
+		<a class="title">Inmobiliaria</a>
+	</div>
+	<div class="menu">
+		<nav>
+			<ul class="lista">
+				<li><img src="../../assets/img/home1.svg"><a href="../../pages/admin/page.html">Inmuebles</a></li>
+				<li><img src="../../assets/img/owner1.svg"><a href="../../pages/admin/propietarios.html">Propietarios</a></li>
+				<li><img src="../../assets/img/key.svg"><a href="../../pages/admin/inquilinos.html">Inquilinos</a></li>
+				<li><img src="../../assets/img/visit.svg"><a href="../../pages/admin/visitas.html">Visitas</a></li>
+				<li><img src="../../assets/img/speaker.svg"><a href="../../pages/admin/anuncios.html">Anuncios</a></li>
+				<li class="target"><img src="../../assets/img/document.svg"><a class="gg" href="../../pages/admin/contratos.html">Contratos</a></li>
+				<li><img src="../../assets/img/import.svg"><a href="../../pages/admin/inspecciones.html">Inspecciones</a></li>
+			</ul>
+		</nav>
+	
+		<div class="salir">
+			<img src="../../assets/img/logout1.svg">
+			<a href="../../pages/login.html">Salir</a>
+		</div>	
+	</div>
+</aside>
+<main>
+<header>
+	<form method="POST">
+		<input class="busqueda" type="search" name="referencia" placeholder="Ref." title="Un código válido consiste en una cadena con 2 letras y 4 dígitos">
+    	<input class="btn" type="submit" value="Buscar">
+  	</form>
+</header>
+<section class="section">
+
+
+
+	<section>
+		<h1>Contratos de Alquiler</h1>
+		<a class="btnReporter"><img src="../../assets/img/boton-pdf.svg">Generar Reporte</a>
+		<div class="register">
+			<h2>Número de Contrato / Importe mensual</h2>
+			<form method="POST">	
+				<div class="cont">
+					<div class="cont1">
+						<h3>Nro</h3>			
+						<input class="precio" type="number" name="numero" required>
+					</div>
+					<div class="cont1">
+						<h3 class="euro">€</h3>
+						<input class="precio " type="number" name="precio" required>
+					</div>
+				</div>
+				<h2>Método de Pago / Importe del depósito</h2>
+				<div class="cont">
+					<div class="cont1">
+						<h3>Método</h3>
+						<select class="select1" required>
+								<option selected>Seleccionar</option>
+								<option>Débito</option>
+								<option>Crédito</option>
+								<option>Efectivo</option>
+								<option>Transferencia</option>
+								<option>Dinero rápido</option>
+								<option>Criptomoneda</option>
+						</select>
+					</div>
+					<div class="cont1">
+						<h3 class="euro">€</h3>
+						<input class="precio " type="number" name="precio" required>
+					</div>
+				</div>
+				<h2>Fecha del contrato</h2>
+				<div class="form1">
+					<div class="cont2">
+						<h3>Inicio</h3>
+						<input type="date" name="fechainicio" required>
+					</div>
+					<div class="cont2">
+						<h3>Cierre</h3>
+						<input type="date" name="fechacierre" required>
+					</div>
+					<div class="cont2">
+						<h3>Meses</h3>
+						<select class="select1" required>
+								<option selected>Seleccionar</option>
+								<option>3 Meses</option>
+								<option>4 Meses</option>
+								<option>5 Meses</option>
+								<option>6 Meses</option>
+								<option>7 Meses</option>
+								<option>8 Meses</option>
+								<option>9 Meses</option>
+								<option>10 Meses</option>
+								<option>11 Meses</option>
+								<option>12 Meses</option>
+						</select>
+					</div>
+				</div>
+				<h2>Agente encargado</h2>
+				<div class="form1">			
+					<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente" required>
+								<img src="../../assets/img/agente4.jpg">		
+								<h3>Robert Downey</h3>
+							</div>
+						</div>
+						<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente" required>
+								<img src="../../assets/img/agente1.jpg">		
+								<h3>Jason Statham</h3>
+							</div>
+						</div>
+						<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente" required>
+								<img src="../../assets/img/agente4.jpg">
+								<h3>Tom Cruise</h3>
+							</div>
+						</div>
+				</div>
+				<h2>Código del Inmueble</h2>
+				<div class="form1">			
+					<div>
+						<input placeholder="REF" type="text" name="codigo" required>
+					</div>
+				</div>											
+				<center style="padding-bottom: 25px; margin-top: 15px">
+					<input class="enviar" type="submit" name="enviar" value="Guardar">	
+				</center>
+			</form>	
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<h1>Buscar Contrato</h1>
+		<div class="caja">
+			<form method="POST">
+				<div>
+					<input type="date" name="precio">
+				</div>
+				<div>
+					<input 	type="texto" name="codigo" placeholder="REF">
+				</div>
+				<div>
+					<button id="filtrar" class="button">Buscar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+
+	<section>
+			<h2 class="all">Todos los contratos</h2>
+			<div class="caja2"></div>
+	</section>	
+</section>
+</main>
+</body>
+</html>

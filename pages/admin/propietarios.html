@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Propietarios</title>
+	<link rel="stylesheet" href="../../assets/css/propietarios.css">
+	<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/propietarios.js" ></script>
+
+</head>
+<body>
+<aside>
+	<div class="logo">
+		<img src="../../assets/img/logo.png">
+		<a class="title">Inmobiliaria</a>
+	</div>
+	<div class="menu">
+		<nav>
+			<ul class="lista">
+				<li><img src="../../assets/img/home1.svg"><a href="../../pages/admin/page.html">Inmuebles</a></li>
+				<li  class="target"><img src="../../assets/img/owner1.svg"><a class="gg" href="../../pages/admin/propietarios.html">Propietarios</a></li>
+				<li><img src="../../assets/img/key.svg"><a href="../../pages/admin/inquilinos.html">Inquilinos</a></li>
+				<li><img src="../../assets/img/visit.svg"><a href="../../pages/admin/visitas.html">Visitas</a></li>
+				<li><img src="../../assets/img/speaker.svg"><a href="../../pages/admin/anuncios.html">Anuncios</a></li>
+				<li><img src="../../assets/img/document.svg"><a href="../../pages/admin/contratos.html">Contratos</a></li>
+				<li><img src="../../assets/img/import.svg"><a href="../../pages/admin/inspecciones.html">Inspecciones</a></li>
+				</ul>
+		</nav>
+	<div class="salir">
+		<img src="../../assets/img/logout1.svg">
+		<a href="../../pages/login.html">Salir</a>
+	</div>	
+	</div>
+</aside>
+<main>
+<header>
+	<form method="POST" action="">
+		<input class="busqueda" type="search" name="referencia" placeholder="Ref." title="Un código válido consiste en una cadena con 2 letras y 4 dígitos">
+    	<input class="btn" type="submit" value="Buscar">
+  	</form>
+</header>
+<section class="section">
+
+
+
+	<section>
+		<h1>Registrar Propietario</h1>
+		<a class="btnReporter"><img src="../../assets/img/boton-pdf.svg">Generar Reporte</a>
+		<div class="register">
+				<select id="opt" class="select1" required>
+					<option value="people" selected>Persona</option>
+					<option value="bussines">Empresa</option>
+				</select>
+
+				<h2>Asignar código</h2>
+				<form id="persona" method="POST">	
+					<div class="form1">
+						<div class="cont">
+							<h3>Código</h3>
+							<input type="text" name="codigo" placeholder="" required>
+						</div>
+						<div class="cont">
+							<h3>Nombre</h3>
+							<input class="direccion" type="text" name="nombre" required>
+						</div>
+						<div class="cont">
+							<h3>Teléfono</h3>
+							<input type="tel" name="telefono" pattern="[0-9]{11}" required>
+						</div>
+					</div>
+					<h2>Dirección</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Calle</h3>
+							<input class="direccion" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3>Número</h3>
+							<input class="habitaciones" type="number" name="numero" required>
+						</div>
+						<div class="cont">
+							<h3>Ciudad</h3>
+							<input class="direccion" type="text" name="ciudad" required>
+						</div>
+					</div>
+					<center style="padding-bottom: 30px; margin-top: 40px">
+					<input class="enviar" type="submit" name="enviar" value="Guardar">	
+					</center>
+				</form>
+
+
+
+				<form id="empresa" method="POST">	
+					<div class="form1">
+						<div class="cont">
+							<h3>Código</h3>
+							<input type="text" name="codigo" required>
+						</div>
+						<div class="cont">
+							<h3>Tipo</h3>
+							<input class="direccion" type="text" name="tipo" required>
+						</div>
+						<div class="cont">
+							<h3>Teléfono</h3>
+							<input type="tel" name="telefono" pattern="[0-9]{11}" required>
+						</div>
+					</div>
+					<h2>Datos</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Nombre comercial</h3>
+							<input class="comercial" type="text" name="calle" required>
+						</div>
+					</div>
+					<h2>Dirección</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Calle</h3>
+							<input class="direccion" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3>Número</h3>
+							<input class="habitaciones" type="number" name="numero" required>
+						</div>
+						<div class="cont">
+							<h3>Ciudad</h3>
+							<input class="direccion" type="text" name="ciudad" required>
+						</div>
+					</div>
+					<h2>Persona de contacto</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Nombre</h3>
+							<input class="direccion" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3>Teléfono</h3>
+							<input class="direccion" type="tel" name="telefono" pattern="[0-9]{11}" required>
+						</div>
+					</div>	
+					<center style="padding-bottom: 30px; margin-top: 40px">
+					<input class="enviar" type="submit" name="enviar" value="Guardar">	
+					</center>
+				</form>	
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<h1>Buscar Propietario</h1>
+		<div class="caja">
+			<form method="POST">
+				<div class="bq">
+				<select class="select" id="option">
+					<option value="all">Seleccionar</option>
+					<option value="alquilar">Persona</option>
+					<option value="comprar">Empresa</option>
+				</select>
+				</div>
+				<div class="bq">
+					<input class="cajabusqueda" type="text" name="nombre" placeholder="Nombre">
+				</div>
+				<div class="bq">
+				<button id="filtrar" class="button">Buscar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+	<section>
+			<h2 class="all">Todos los registros</h2>
+			<div class="caja2"></div>
+	</section>	
+
+
+
+
+</section>
+</main>
+</body>
+</html>

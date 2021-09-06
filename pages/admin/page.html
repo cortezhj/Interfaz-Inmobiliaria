@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inmuebles</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/page.css">
+	<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+	<script src="../../assets/js/jquery.js"></script>
+	<script src="../../assets/js/pages.js"></script>
+
+</head>
+<body>
+<aside>
+	<div class="logo">
+		<img src="../../assets/img/logo.png">
+		<a class="title">Inmobiliaria</a>
+	</div>
+	<div class="menu">
+		<nav>
+			<ul class="lista">
+				<li class="target"><img src="../../assets/img/home1.svg"><a class="gg" href="../../pages/admin/page.html">Inmuebles</a></li>
+				<li><img src="../../assets/img/owner1.svg"><a href="../../pages/admin/propietarios.html">Propietarios</a></li>
+				<li><img src="../../assets/img/key.svg"><a href="../../pages/admin/inquilinos.html">Inquilinos</a></li>
+				<li><img src="../../assets/img/visit.svg"><a href="../../pages/admin/visitas.html">Visitas</a></li>
+				<li><img src="../../assets/img/speaker.svg"><a href="../../pages/admin/anuncios.html">Anuncios</a></li>
+				<li><img src="../../assets/img/document.svg"><a href="../../pages/admin/contratos.html">Contratos</a></li>
+				<li><img src="../../assets/img/import.svg"><a href="../../pages/admin/inspecciones.html">Inspecciones</a></li>
+				</ul>
+		</nav>
+	<div class="salir">
+		<img src="../../assets/img/logout1.svg">
+		<a href="../../pages/login.html">Salir</a>
+	</div>	
+	</div>
+</aside>
+<main>
+<header>
+	<form method="POST" action="">
+		<input class="busqueda" type="search" name="referencia" placeholder="Ref." title="Un código válido consiste en una cadena con 2 letras y 4 dígitos">
+    	<input class="btn" type="submit" value="Buscar">
+  	</form>
+</header>
+<section class="section">
+
+
+	<section>
+		<h1>Registrar Inmueble</h1>
+		<a class="btnReporter"><img src="../../assets/img/boton-pdf.svg">Generar Reporte</a>
+			<div class="register">
+			<form action="" method="POST">	
+				<h2>Asignar código</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Tipo</h3>
+							<select class="select1" required>
+								<option value="tipo" selected>Seleccionar</option>
+								<option value="AP">Apartamento</option>
+								<option value="CA">Casa</option>
+								<option value="ED">Edificio</option>
+								<option value="GA">Garaje</option>
+								<option value="LO">Local</option>
+								<option value="PI">Piso</option>
+								<option value="TE">Terreno</option>
+							</select>
+						</div>
+						<div class="cont">
+							<h3 class="h3">Código</h3>
+							<input type="text" name="codigo" required>
+						</div>
+						<div class="cont">
+							<h3 class="h3">Habitaciones</h3>
+							<input class="habitaciones" type="number" name="habitaciones" required>
+						</div>
+					</div>
+					<h2>Ubicación</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Calle</h3>
+							<input class="direccion" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3 class="h3">Número</h3>
+							<input class="habitaciones" type="number" name="numero" required>
+						</div>
+						<div class="cont">
+							<h3 class="h3">Ciudad</h3>
+							<input class="direccion" type="text" name="ciudad" required>
+						</div>
+					</div>
+					<h2>Asignar Agente</h2>
+					<div class="form1">
+						<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente" required>
+								<img src="../../assets/img/agente4.jpg">		
+								<h3>Robert Downey</h3>
+							</div>
+						</div>
+						<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente">
+								<img src="../../assets/img/agente1.jpg" required>		
+								<h3>Jason Statham</h3>
+							</div>
+						</div>
+						<div class="cont1">
+							<div class="datos">
+							<input type="radio" name="agente">
+								<img src="../../assets/img/agente4.jpg" required>
+								<h3>Tom Cruise</h3>
+							</div>
+						</div>
+					</div>
+					<h2>Precio</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Tipo</h3>
+							<select class="select1" required>
+								<option value="tipo" selected>Seleccionar</option>
+								<option value="alq">Alquiler</option>
+								<option value="vent">Venta</option>
+							</select>
+						</div>
+						<div class="cont">
+							<h3 class="euro">€</h3>
+							<input class="precio " type="number" name="precio" required>
+						</div>
+
+						<div class="cont">
+							<h3 class="h3">Foto</h3>
+							<input class="file" type="file" name="foto">
+						</div>
+					</div>
+				<br>
+			</div>
+				<br>		
+				<center>
+					<input class="enviar" type="submit" name="enviar" value="Guardar">
+				</center>
+			</form>	
+	</section>
+
+
+
+
+	<section>
+			<h1>Eliminar Inmueble</h1>
+			<div class="caja">
+				<form action="" method="POST">
+					<div class="bq">
+					<select class="select" >
+						<option value="all" selected>Seleccionar</option>
+						<option value="apartamentos">Apartamento</option>
+						<option value="casas">Casa</option>
+						<option value="edificios">Edificio</option>
+						<option value="garajes">Garaje</option>
+						<option value="locales">Locale</option>
+						<option value="pisos">Piso</option>
+						<option value="terrenos">Terreno</option>
+					</select>
+					</div>
+					<div class="bq">
+						<input class="codeliminar" placeholder="Código" type="text" name="codigo" required>
+					</div>
+					<div class="bq">
+					<button class="button">Eliminar</button>
+					</div>
+				</form>
+			</div>
+	</section>	
+
+
+
+
+	<section>
+		<h1>Buscar Inmueble</h1>
+		<div class="caja">
+			<form action="" method="POST">
+				<div class="bq">
+				<select class="select" id="option">
+					<option value="all">Seleccionar</option>
+					<option value="alquilar">Alquilar</option>
+					<option value="comprar">Comprar</option>
+				</select>
+				</div>
+				<div class="bq">
+				<select class="select" id="type">
+					<option value="all" selected>Inmuebles</option>
+					<option value="apartamentos">Apartamentos</option>
+					<option value="casas">Casas</option>
+					<option value="edificios">Edificios</option>
+					<option value="garajes">Garajes</option>
+					<option value="locales">Locales</option>
+					<option value="pisos">Pisos</option>
+					<option value="terrenos">Terrenos</option>
+				</select>
+				</div>
+				<div class="bq">
+				<button id="filtrar" class="button">Buscar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<div class="inmuebles">
+			<section class="product_list">
+				<div class="product_item" cat="comprar" tipo="apartamentos">
+					<img src="../../assets/img/apartamento.jpg" alt="">
+					<div class="contenido">
+							<a class="edit">Editar</a>
+						<div>
+							<a>Código: AP3613 </a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>13.000.000 €</h2>
+						</div>
+					</div>					
+				</div>
+				<div class="product_item" cat="comprar" tipo="casas">
+					<img src="../../assets/img/casa1.jpg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: CA2613</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>7.000.000 €</h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="comprar" tipo="terrenos">
+					<img src="../../assets/img/terreno1.jpg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: TE9613</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>1.500.000 €</h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="alquilar" tipo="locales">	
+					<img src="../../assets/img/local.jpg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: LO7613</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>250 € <small>/ mes</small></h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="comprar" tipo="casas">
+					<img src="../../assets/img/casa2.png" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: CA3623</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>5.000.000 €</h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="alquilar" tipo="apartamentos">
+					<img src="../../assets/img/apartamento2.jpg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: AP3623</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>5.000 € <small>/ mes</small></h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="comprar" tipo="garajes">
+					<img src="../../assets/img/garajes.jpeg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>	
+							<a>Código: GA5613</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>5.500.000 €</h2>
+						</div>
+					</div>
+				</div>
+				<div class="product_item" cat="alquilar" tipo="casas">
+					<img src="../../assets/img/casa5.jpg" alt="">
+					<div class="contenido">
+						<a class="edit">Editar</a>
+						<div>
+							<a>Código: CA4623</a>
+							<p><b>Habitaciones: </b>5</p>
+							<p><b>Calle: </b>Tarea</p>
+							<p><b>Número: </b>5</p>
+							<p><b>Ciudad: </b>Barquisimeto</p>
+							<h2>4.500 €</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+
+
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inquilinos</title>
+	<link rel="stylesheet" href="../../assets/css/inquilinos.css">
+	<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+</head>
+<body>
+<aside>
+	<div class="logo">
+		<img src="../../assets/img/logo.png">
+		<a class="title">Inmobiliaria</a>
+	</div>
+	<div class="menu">
+		<nav>
+			<ul class="lista">
+				<li><img src="../../assets/img/home1.svg"><a href="../../pages/admin/page.html">Inmuebles</a></li>
+				<li><img src="../../assets/img/owner1.svg"><a href="../../pages/admin/propietarios.html">Propietarios</a></li>
+				<li  class="target"><img src="../../assets/img/key.svg"><a class="gg" href="../../pages/admin/inquilinos.html">Inquilinos</a></li>
+				<li><img src="../../assets/img/visit.svg"><a href="../../pages/admin/visitas.html">Visitas</a></li>
+				<li><img src="../../assets/img/speaker.svg"><a href="../../pages/admin/anuncios.html">Anuncios</a></li>
+				<li><img src="../../assets/img/document.svg"><a href="../../pages/admin/contratos.html">Contratos</a></li>
+				<li><img src="../../assets/img/import.svg"><a href="../../pages/admin/inspecciones.html">Inspecciones</a></li>
+				</ul>
+		</nav>
+	<div class="salir">
+		<img src="../../assets/img/logout1.svg">
+		<a href="../../pages/login.html">Salir</a>
+	</div>	
+	</div>
+</aside>
+<main>
+<header>
+	<form method="POST" action="">
+		<input class="busqueda" type="search" name="referencia" placeholder="Ref." title="Un código válido consiste en una cadena con 2 letras y 4 dígitos">
+    	<input class="btn" type="submit" value="Buscar">
+  	</form>
+</header>
+<section class="section">
+
+
+
+	<section>
+		<h1>Registrar Clientes</h1>
+		<a class="btnReporter"><img src="../../assets/img/boton-pdf.svg">Generar Reporte</a>
+		<div class="register">
+			<form id="persona" method="POST">	
+				<h2>Datos</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Nombre</h3>
+							<input class="comercial" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3>Teléfono</h3>
+							<input type="tel" name="telefono" pattern="[0-9]{11}" required>
+						</div>
+					</div>
+					<h2>Dirección</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Calle</h3>
+							<input class="direccion" type="text" name="calle" required>
+						</div>
+						<div class="cont">
+							<h3>Número</h3>
+							<input class="habitaciones" type="number" name="numero" required>
+						</div>
+						<div class="cont">
+							<h3>Ciudad</h3>
+							<input class="direccion" type="text" name="ciudad" required>
+						</div>
+					</div>
+					<h2>Importe máximo a pagar</h2>
+					<div class="form1">
+						<div class="cont">
+							<h3>Tipo</h3>
+							<select class="select1" required>
+								<option value="tipo" selected>Seleccionar</option>
+								<option value="AP">Apartamento</option>
+								<option value="CA">Casa</option>
+								<option value="ED">Edificio</option>
+								<option value="GA">Garaje</option>
+								<option value="LO">Local</option>
+								<option value="PI">Piso</option>
+								<option value="TE">Terreno</option>
+							</select>			
+						</div>
+						<div class="cont">
+							<h3 class="euro">€</h3>
+							<input class="precio " type="number" name="precio" required>
+						</div>
+						<div class="cont">
+							<h3>Código</h3>
+							<input type="text" name="codigo" placeholder="Asignar" required>
+						</div>
+					</div>					
+					<div class="form1">	
+						<details>
+							<summary>Entrevista</summary>
+							<div class="form1">
+								<div class="cont">
+									<h3>Fecha</h3>
+									<input class="fecha" type="date" name="precio">
+								</div>
+								<div class="cont">
+									<h3>Agente</h3>
+									<select class="select1">
+										<option value="tipo" selected>Seleccionar</option>
+										<option>Robert D.</option>
+										<option>Jason S.</option>
+										<option>Tom C.</option>
+									</select>			
+								</div>
+							</div>
+							<div class="form1">
+								<div class="">
+									<h3>Comentarios generales</h3>
+									<textarea class="texto">
+									</textarea>
+								</div>
+								
+							</div>	
+						</details>
+					</div>	
+					<center style="padding-bottom: 25px; margin-top: 15px">
+					<input class="enviar" type="submit" name="enviar" value="Guardar">	
+					</center>
+				</form>
+			</div>
+	</section>
+
+
+
+
+	<section>
+		<h1>Buscar Cliente</h1>
+		<div class="caja">
+			<form method="POST">
+				<div class="bq">
+				<select class="select" id="option">
+					<option value="all">Seleccionar</option>
+					<option value="alquilar">Persona</option>
+					<option value="comprar">Empresa</option>
+				</select>
+				</div>
+				<div class="bq">
+					<input class="nombrebusqueda" type="text" name="nombre" placeholder="Nombre">
+				</div>
+				<div class="bq">
+				<button id="filtrar" class="button">Buscar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+	<section>
+			<h2 class="all">Todos los clientes</h2>
+			<div class="caja2"></div>
+	</section>	
+
+</section>
+</main>
+</body>
+</html>

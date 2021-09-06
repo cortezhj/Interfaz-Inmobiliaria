@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contáctanos</title>
+	<link rel="stylesheet" href="../assets/css/contacto.css">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+</head>
+<body class="site">
+<header>
+	<div class="logo">
+		<div class="imagen">
+			<a href="../index.html">
+				<img src="../assets/img/logo2.png">
+			</a>
+		</div>
+		<div class="titulo">
+			<a href="../index.html">Inmobiliaria</a>
+		</div>
+	</div>
+	<div class="head">
+		<a href="../pages/login.html"><img class="user" src="../assets/img/user.png">&nbsp;Iniciar Sesión</a>
+	</div>
+	<div class="header">
+		<nav>
+			<ul class="lista">
+				<li><a href="../index.html">INICIO</a></li>
+				<li><a href="../pages/inmuebles.html">INMUEBLES</a></li>
+				<li><a href="../pages/vender.html">VENDER</a></li>
+				<li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+				<li><a class="target" href="../pages/contacto.html">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</div>	
+</header>
+
+<main class="site_content">
+	<section class="section1">
+		<div class="ubicacion">
+			<h1>Contacta con Nuestro Equipo</h1>
+			
+			<form action="" id="form" method="POST">
+				<input type="text" id="name" onkeypress="nameValid()" name="nombre" placeholder="Nombre y apellidos*" required>
+				<input type="email" name="email" placeholder="Email*" required>
+				<input type="tel" name="telefono" id="phone" placeholder="Teléfono*" onkeypress="phoneValid()" pattern="[0-9]{11}" required>
+				<textarea class="caja" id="comment" onkeypress="commentValid()" name="texto" rows="3" placeholder="Mensaje"></textarea>
+				<button id="btnSend" type="submit">Enviar</button>
+			</form>
+
+		</div>
+		<div class="contacto">
+			<h1 class="titlecita">Agendar Cita</h1>
+			<h3>Si desea concertar una <b>cita</b> con alguno de nuestros <b>asesores inmobiliarios</b>, por favor rellene este formulario.</h3>
+			<div>
+				<form class="form2" id="form" action="" method="POST">
+					<h4>Fecha</h4>
+					<input type="date" name="fecha" required>
+					<h4>Agente</h4>
+					<select required>
+						<option value="" selected>Seleccionar</option>
+						<option value="">Robert Downey</option>
+						<option value="">Jason Statham</option>
+						<option value="">Tom Cruise</option>
+					</select>
+					<h4>Nombre</h4>
+					<input type="text" id="name2" name="nombre" onkeypress="nameValid2()" placeholder="Nombre" required>
+					<h4>Teléfono</h4>
+					<input type="tel" name="telefono" onkeypress="phoneValid2()" id="phone2" placeholder="0000-000-00-00" pattern="[0-9]{11}" required>
+					<button id="btn" type="submit">Enviar</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="section3">
+		<div class="cont1">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7857.183471705636!2d-69.36749119066785!3d10.050508507010793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8766b9ad2ae25b%3A0xa1b16cf446857ad1!2sUPTAEB%20-%20Universidad%20Polit%C3%A9cnica%20Territorial%20Andr%C3%A9s%20Eloy%20Blanco!5e0!3m2!1ses-419!2sve!4v1599070788603!5m2!1ses-419!2sve" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+		<div class="cont2">
+			<h1>OFICINA INMOBILIARIA</h1>
+			<hr>
+			<p>Si desea contactar con nuestra inmobiliaria en Pueblo Nuevo, llámenos o visítenos en nuestra oficina.
+			<br><br>
+			Avenida los Horcones con Avenida la Salle
+			<br>
+			Sector Pueblo Nuevo, Municipio Iribarren
+			<br>
+			Parroquia Juan De Villegas.
+			<br><br>
+			Horario
+			<br>
+			Lunes a viernes: de 8:00<small> am</small>
+			a 12:00<small> pm</small>
+			y de 2:00<small> pm</small>
+			a 6:00<small> pm</small>
+			<br>
+			Sábados: de 8:00 <small>am</small>
+			a 1:00<small> pm</small>
+			<h2>0251 123 45 67 </h2> 
+			</p>	
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>© 2020 Inmobiliaria. Todos los Derechos Reservados.</p>
+</footer>	
+<script src="../assets/js/validaForm.js"></script>
+</body>
+</html>

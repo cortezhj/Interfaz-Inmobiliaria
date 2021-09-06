@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inmuebles</title>
+	<link rel="stylesheet" href="../assets/css/inmuebles.css">
+	<link rel="icon" type="image/png" href="../assets/img/logo.png">
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/inmuebles.js"></script>
+</head>
+<body class="site">
+<header>
+	<div class="logo">
+		<div class="imagen">
+			<a href="../index.html">
+				<img src="../assets/img/logo2.png">
+			</a>
+		</div>
+		<div class="titulo">
+			<a href="../index.html">Inmobiliaria</a>
+		</div>
+	</div>
+	<div class="head">
+		<a href="../pages/login.html"><img class="user" src="../assets/img/user.png">&nbsp;Iniciar Sesión</a>
+	</div>
+	<div class="header">
+		<nav>
+			<ul class="lista">
+				<li><a href="../index.html">INICIO</a></li>
+				<li><a class="target" href="../pages/inmuebles.html">INMUEBLES</a></li>
+				<li><a href="../pages/vender.html">VENDER</a></li>
+				<li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+				<li><a href="../pages/contacto.html">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</div>	
+</header>
+
+<main class="site_content">
+	<section class="section1">
+		<div class="comprar">
+			<h1>¿Quieres comprar o alquilar una casa?</h1>
+			<p>En Inmobiliaria disponemos de un ámplio catálogo de viviendas en venta en las zonas y urbanizaciones más exclusivas de la ciudad y sus alrededores.</p>
+		</div>
+		<div class="caja">
+			<form method="POST">
+				<select class="select" id="option">
+					<option value="all">Seleccionar</option>
+					<option value="alquilar">Alquilar</option>
+					<option value="comprar">Comprar</option>
+				</select>
+				<select class="select" id="type">
+					<option value="all" selected>Inmuebles</option>
+					<option value="apartamentos">Apartamentos</option>
+					<option value="casas">Casas</option>
+					<option value="edificios">Edificios</option>
+					<option value="garajes">Garajes</option>
+					<option value="locales">Locales</option>
+					<option value="pisos">Pisos</option>
+					<option value="terrenos">Terrenos</option>
+				</select>
+				<button id="filtrar" class="button">Buscar</button>
+			</form>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<div class="inmuebles">
+				<section class="product_list">
+					<div class="product_item" cat="comprar" tipo="apartamentos">
+						<img src="../assets/img/apartamento.jpg" alt="">
+						<a href="../pages/propiedades.html">Exclusivo apartamento con impresionante vista...</a>
+						<p>· 5 habitaciones · 3 baños · AP3613</p>
+						<h2>13.000.000 €</h2>
+					</div>
+					<div class="product_item" cat="comprar" tipo="casas">
+						<img src="../assets/img/casa1.jpg" alt="">
+						<a href="../pages/propiedades.html">Excelente casa en venta ubicada en cabudare...</a>
+						<p>· 5 habitaciones · 2 baños · CA2613</p>
+						<h2>7.000.000 €</h2>
+					</div>
+					<div class="product_item" cat="comprar" tipo="terrenos">
+						<img src="../assets/img/terreno1.jpg" alt="">
+						<a href="../pages/propiedades.html">Terreno en lomas de Cubiro con todos los servicios...</a>
+						<p>· 864 m² · Cercado · TE9613</p>
+						<h2>1.500.000 €</h2>
+					</div>
+					<div class="product_item" cat="alquilar" tipo="locales">
+						<img src="../assets/img/local.jpg" alt="">
+						<a href="../pages/propiedades.html">Local comercial en alquiler, excelente ubicación...</a>
+						<p>· Puerta vidrio · 1 baño · LO7613</p>
+						<h2>250 € <small>/ mes</small></h2>
+					</div>
+					<div class="product_item" cat="comprar" tipo="casas">
+						<img src="../assets/img/casa2.png" alt="">
+						<a href="../pages/propiedades.html">Hermosa casa en venta en urbanismo privado...</a>
+						<p>· 3 habitaciones · 3 baño · CA3623</p>
+						<h2>5.000.000 €</h2>
+					</div>
+					<div class="product_item" cat="alquilar" tipo="apartamentos">
+						<img src="../assets/img/apartamento2.jpg" alt="">
+						<a href="../pages/propiedades.html">Cómodo apartamento de lujo, ubicado en la Av...</a>
+						<p>· 2 habitaciones · 1 baño · AP3623</p>
+						<h2>5.000 € <small>/ mes</small></h2>
+					</div>
+					<div class="product_item" cat="comprar" tipo="garajes">
+						<img src="../assets/img/garajes.jpeg" alt="">
+						<a href="../pages/propiedades.html">Amplio garaje en venta, ubicado en zona centrica...</a>
+						<p>· 20 Puestos · 3 Salidas · GA5613</p>
+						<h2>5.500.000 €</h2>
+					</div>
+					<div class="product_item" cat="alquilar" tipo="casas">
+						<img src="../assets/img/casa5.jpg" alt="">
+						<a href="../pages/propiedades.html">Casa en alquiler, en sector las villas de Cabudare...</a>
+						<p>· 3 habitaciones · 2 baños · CA4623</p>
+						<h2>4.500 €</h2>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>© 2020 Inmobiliaria. Todos los Derechos Reservados.</p>
+</footer>
+</body>
+</html>
